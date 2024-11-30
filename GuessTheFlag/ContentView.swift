@@ -9,15 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
 	var body: some View {
-		ZStack(alignment: .bottom) {
-			Color.red
-				.frame(minWidth: 200, maxWidth: .infinity, maxHeight: 200)
-			Text("This is inside a stack")
-				.padding()
-				.background(.blue)
-			Text("Hello, world!")
-				.background(.yellow)
+		VStack {
+			LinearGradient(
+				colors: [
+					.white,
+					.black
+				],
+				startPoint: .top,
+				endPoint: .bottom
+			)
+			.frame(width: .infinity, height: 300, alignment: .center)
+			LinearGradient(
+				stops: [
+					Gradient.Stop(color: .white, location: 0.3),
+					Gradient.Stop(color: .black, location: 0.9),
+				],
+				startPoint: .top,
+				endPoint: .bottom
+			)
+			.frame(width: .infinity, height: 300, alignment: .center)
+//			VStack(spacing: 0) {
+//				Color.red
+//				Color.blue
+//			}
+//			.frame(width: .infinity, height: 300, alignment: .center)
+			Text("Your content")
+				.foregroundStyle(.secondary)
+				.padding(50)
+				.background(.ultraThinMaterial)
 		}
+		.ignoresSafeArea()
 	}
 }
 
