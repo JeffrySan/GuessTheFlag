@@ -10,9 +10,13 @@ import SwiftUI
 struct ContentView: View {
 	var body: some View {
 		ZStack(alignment: .bottom) {
-			Text("Hello, world!")
+			Color.red
+				.frame(minWidth: 200, maxWidth: .infinity, maxHeight: 200)
 			Text("This is inside a stack")
 				.padding()
+				.background(.blue)
+			Text("Hello, world!")
+				.background(.yellow)
 		}
 	}
 }
