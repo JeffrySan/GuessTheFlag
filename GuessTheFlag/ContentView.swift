@@ -10,48 +10,11 @@ import SwiftUI
 struct ContentView: View {
 	var body: some View {
 		VStack {
-			LinearGradient(
-				colors: [
-					.white,
-					.black
-				],
-				startPoint: .top,
-				endPoint: .bottom
-			)
-			.frame(width: .infinity, height: 300, alignment: .center)
-			LinearGradient(
-				stops: [
-					Gradient.Stop(color: .white, location: 0.3),
-					Gradient.Stop(color: .black, location: 0.9),
-				],
-				startPoint: .top,
-				endPoint: .bottom
-			)
-			.frame(width: .infinity, height: 300, alignment: .center)
-			AngularGradient(
-				colors: [
-					.red, .yellow, .green, .blue, .purple, .red
-				],
-				center: .center
-			)
-			RadialGradient(
-				colors: [
-					.blue,
-					.black
-				],
-				center: .center,
-				startRadius: 20,
-				endRadius: 200
-			)
-//			VStack(spacing: 0) {
-//				Color.red
-//				Color.blue
-//			}
-//			.frame(width: .infinity, height: 300, alignment: .center)
 			Text("Your content")
-				.foregroundStyle(.secondary)
-				.padding(50)
-				.background(.ultraThinMaterial)
+				.frame(maxWidth: .infinity, maxHeight: .infinity)
+				.foregroundStyle(.white)
+				.background(.red.gradient)
+				.frame(width: .infinity, height: 500, alignment: .bottom)
 		}
 		.ignoresSafeArea()
 	}
