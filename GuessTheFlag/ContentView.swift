@@ -28,6 +28,21 @@ struct ContentView: View {
 				endPoint: .bottom
 			)
 			.frame(width: .infinity, height: 300, alignment: .center)
+			AngularGradient(
+				colors: [
+					.red, .yellow, .green, .blue, .purple, .red
+				],
+				center: .center
+			)
+			RadialGradient(
+				colors: [
+					.blue,
+					.black
+				],
+				center: .center,
+				startRadius: 20,
+				endRadius: 200
+			)
 //			VStack(spacing: 0) {
 //				Color.red
 //				Color.blue
