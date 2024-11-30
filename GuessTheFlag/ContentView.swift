@@ -19,7 +19,33 @@ struct ContentView: View {
 				.buttonStyle(.borderedProminent)
 			Button("Button 4", role: .destructive) { }
 				.buttonStyle(.borderedProminent)
+			Button {
+				print("Button was tapped")
+			} label: {
+				Text("Tap me!")
+					.padding()
+					.foregroundStyle(.white)
+					.background(.red)
+			}
+			
+			Image("pencil")
+			Image(decorative: "pencil")
+			Image(systemName: "pencil")
+			
+			Button("Edit", systemImage: "pencil") {
+				print("Edit button was tapped")
+			}
+			
+			Button {
+				print("Edit button was tapped")
+			} label: {
+				Label("Edit", systemImage: "pencil")
+					.padding()
+					.foregroundStyle(.white)
+					.background(.red)
+			}
 		}
+		.padding()
 	}
 	
 	func executeDelete() {
